@@ -6,19 +6,19 @@ import javax.validation.constraints.Size
 
 data class AuthorRequest(
 
-    @NotBlank
-    var nome: String,
+    @field:NotBlank
+    var name: String,
 
-    @NotBlank
+    @field:NotBlank
     @Email
     var email: String,
 
-    @NotBlank
+    @field:NotBlank
     @Size(max = 400)
-    var descricao: String
+    var description: String
     
 ){
     fun toModel():Author{
-        return Author(nome, email, descricao)
+        return Author(name, email, description)
     }
 }

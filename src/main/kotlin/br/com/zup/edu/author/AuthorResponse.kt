@@ -4,9 +4,9 @@ import java.time.LocalTime
 
 data class AuthorResponse(
     val id: Long,
-    val nome: String,
+    val name: String,
     val email: String,
-    val descricao: String,
+    val description: String,
     val create: LocalTime
 
 ) {
@@ -14,10 +14,10 @@ data class AuthorResponse(
         fun modelToDto(author: Author): AuthorResponse {
             return AuthorResponse(
                 author.id!!,
-                author.nome,
+                author.name,
                 author.email,
-                author.descricao,
-                author.create
+                author.description,
+                author.createAt
             )
         }
     }
